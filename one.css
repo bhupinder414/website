@@ -10,11 +10,28 @@
   margin:40px 20px 50px 25px;
 }
 
-
 .container
 {
  padding: 5px 10px 5px 50px ;
 }
+
+.d
+{
+  width: 98%;
+  padding:2px;
+  border :2px solid black;
+  float:left;
+  margin:10px 10px 20px 10px;
+}
+
+table,th,td
+{
+  border:1px solid black;
+  border-collapse:collapse;
+  margin:10px;
+  padding : 15px;
+}
+
 
 .test
 {
@@ -41,4 +58,46 @@
    background-color: #55ff55;
    color: white;
    
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  float:left;
+  margin:10px 20px 10px 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
 }
